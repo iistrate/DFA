@@ -1,9 +1,8 @@
 class Node(object):
     """Node"""
-    def __init__(self, initial, keys, final):
-        self.mInitial = int(initial)
-        self.mLetter = keys
-        self.mFinal = int(final)
-
+    def __init__(self, value, letter, goto):
+        self.mValue = int(value)
+        self.mLetter = letter
+        self.mGoto = int(goto)
 
 
