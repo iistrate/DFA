@@ -25,7 +25,7 @@ def main():
             #store final states
             finalStates = line.split(' ')
             #string to ints
-            finalStates = map(int, finalStates)
+            finalStates = [int(i) for i in finalStates]
         #store transitions
         else:
             line = line.split(' ')
