@@ -46,7 +46,6 @@ def main():
             #we always begin at 0
             testCase = uInput
             testCase = testCase + testCase[-1]
-            print(testCase)
             currentNode = 0
             error = False
             counter = 0
@@ -65,6 +64,7 @@ def main():
                                 if (currentNode in finalStates):
                                     break
                                 else:
+                                    print("Error last letter not in final state")
                                     error = True
                                     break
                             #advance cursor
@@ -72,13 +72,14 @@ def main():
                             break
                 #if letter not in language set error flag and quit
                 else:
+                    print("Error letter not in alphabet")
                     error = True
                     break
                 counter += 1
             if (error):
                 print("Not valid!")
             else:
-                print("String accepted")            
+                print("String accepted")   
 
 if __name__ == '__main__':
     main()
