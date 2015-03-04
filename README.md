@@ -1,7 +1,7 @@
 # DFA
 Python DFA simulator
 
-A deterministic finite automaton(DFA) —also known as deterministic finite state machine—
+A deterministic finite automaton(DFA) â€”also known as deterministic finite state machineâ€”
 is a finite state machine that accepts/rejects finite strings of symbols and only produces 
 a unique computation (or run) of the automaton for each input string.
 
@@ -21,23 +21,12 @@ Show the trace of the transitions through the machine along with whether the str
 
 Continue reading strings until user enters "quit" 
 
-
 Example input file... (ab)* 
 
 0
-
-0 a
- 
-1 b
- 
-2 1
- 
-a 2
- 
+0 a 1 
+0 b 2
+1 a 2
 1 b 0
- 
-2 a 2 
-
+2 a 2
 2 b 2
-
-
