@@ -24,12 +24,20 @@ Continue reading strings until user enters "quit"
 
 Example input file... (ab)* 
 
-0 
-0 a 
-1 b 
-2 1 
-a 2 
-1 b 0 
+0
+
+0 a
+ 
+1 b
+ 
+2 1
+ 
+a 2
+ 
+1 b 0
+ 
 2 a 2 
-2 b 2 
+
+2 b 2
+
 
