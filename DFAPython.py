@@ -47,6 +47,7 @@ def main():
                     #check if letter belongs to current node
                     for node in nodes:
                         if node.mValue == currentNode and node.mLetter == letter:
+                            print("{} in state {}".format(node.mLetter, node.mValue))
                             #if letter is last letter
                             if (counter == len(testCase) - 1):
                                 #and it is in a final state then string is accepted
