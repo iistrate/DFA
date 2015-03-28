@@ -1,7 +1,7 @@
 from Node import *
 
 class Parser(object):
-    """description of class"""
+    """Parses file and returns alphabet, nodes, and final states"""
     def __init__(self, file):
         self.__m_file = file
         self.__m_Nodes = []
@@ -24,6 +24,7 @@ class Parser(object):
                 if (line[1] not in self.__m_alphabet):
                     self.__m_alphabet.append(line[1])
             counter += 1
+        self.close()
 
     def close(self):
         #done with file so close
