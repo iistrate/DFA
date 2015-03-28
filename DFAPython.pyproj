@@ -26,6 +26,9 @@
     <Compile Include="Node.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

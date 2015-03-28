@@ -1,7 +1,8 @@
 #
 #   Python DFA
 #
-import Node
+from Node import *
+from Parser import *
 
 def main(): 
     #get filename to open    
@@ -14,27 +15,15 @@ def main():
         except:
             print("Invalid file")
 
+    #parse file and get alphabet, nodes, and final states
+    fileParser = Parser(file)
+    fileParser.parse()
+
     #parse file and store states
-    counter = 0
-    nodes = []
-    finalStates = []
-    alphabet = []
-    for line in file:
-        #first line contains final states
-        if (counter == 0):
-            #store final states
-            finalStates = line.split(' ')
-            #string to ints
-            finalStates = [int(i) for i in finalStates]
-        #store transitions
-        else:
-            line = line.split(' ')
-            nodes.append(Node.Node(line[0], line[1], line[2]))
-            if (line[1] not in alphabet):
-                alphabet.append(line[1])
-        counter += 1
-    #done with file so close
-    file.close
+    nodes = fileParser.getNodes()
+    finalStates = fileParser.getFinalStates()
+    alphabet = fileParser.getAlphabet()
+
 
     #get string to check against
     running = True;
